@@ -1,0 +1,52 @@
+.track-container {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.track-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.track-info * {
+  width: 275px;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.track-info h3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.track-info p {
+  color: #797979;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.track-action {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: orange;
+  background: transparent;
+  border: 1px solid orange;
+  border-radius: 1.5rem;
+}
+.track-action p {
+  font-size: 1.125rem;
+  vertical-align: middle;
+}
+.track-action:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.track-list {
+  width: 100%;
+  height: 27rem;
+  margin-top: 2rem;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 4rem;
+  row-gap: 1rem;
+}
+.track-list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.track-list::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to bottom, purple, orange);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.track-list::-webkit-scrollbar-corner {
+  background: transparent;
+}
