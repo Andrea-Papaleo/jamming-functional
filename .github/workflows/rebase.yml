@@ -9,6 +9,7 @@ jobs:
 
     steps:
       - name: Automatic Rebase
-        uses: cirrus-actions/rebase@1.8
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        uses: cirrus-actions/rebase@1.4
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: ${{ github.head_ref }}
