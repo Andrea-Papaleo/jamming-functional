@@ -4,7 +4,7 @@ on:
     types: [labeled]
 jobs:
   autorebase:
-    if: ${{ github.event.label.name == 'rebase' }}
+    if: ${{ github.event.label.name == 'auto-rebase' }}
     name: Rebase
     runs-on: ubuntu-latest
 
