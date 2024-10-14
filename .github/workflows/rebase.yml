@@ -1,9 +1,10 @@
 name: Automatic Rebase
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [labeled]
 jobs:
   autorebase:
+    if: ${{ github.event.label.name == 'rebase' }}
     name: Rebase
     runs-on: ubuntu-latest
 
