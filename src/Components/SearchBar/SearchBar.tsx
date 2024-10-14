@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
-export const SearchBar = ({ onSearch }) => {
+export const SearchBar = ({
+  onSearch,
+}: {
+  onSearch: (searchTerm: string) => void;
+}) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleInput = (newTerm) => {
+  const handleInput = (newTerm: string) => {
     setSearchTerm(newTerm);
   };
 

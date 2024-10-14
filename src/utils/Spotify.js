@@ -1,6 +1,6 @@
 // Import api info
 import { spotifyAPIClientId } from "./tokens";
-
+import axios from "axios";
 var accessToken;
 const clientID = spotifyAPIClientId;
 const redirectURI = "http://localhost:3000";
@@ -29,6 +29,14 @@ const Spotify = {
 
       return (window.location = accessURL);
     }
+  },
+
+  async getUserInfo() {
+    let { data } = await axios.get("https://api.spotify.com/v1/me", {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
   },
 
   async search(term) {
