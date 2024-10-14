@@ -8,8 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Automatic Rebase
-        uses: cirrus-actions/rebase@1.4
+      - name: Checkout the latest code
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.GH_PAT }}
-          branch: ${{ github.head_ref }}
+          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
+      - name: Automatic Rebase
+        uses: cirrus-actions/rebase@1.8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
